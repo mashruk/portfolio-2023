@@ -63,7 +63,7 @@ export default function Home() {
 						opacity: 1,
 						y: 0,
 					}}
-					viewport={{ amount: 0.9 }}
+					viewport={{ amount: 0.9, once: true }}
 				>
 					Churning inner creativity{" "}
 					<Box as="span" fontWeight={"light"}>
@@ -717,6 +717,16 @@ const CareerInANutShell1 = () => {
 					</Text>
 
 					<Text
+						as={motion.p}
+						initial={{
+							opacity: 0,
+							y: 30,
+						}}
+						whileInView={{
+							opacity: 1,
+							y: 0,
+						}}
+						viewport={{ amount: 0.9, once: true }}
 						mt="6"
 						mb="3"
 						fontSize="lg"
@@ -725,7 +735,24 @@ const CareerInANutShell1 = () => {
 					>
 						Worked in Stacks
 					</Text>
-					<Grid gridTemplateColumns="repeat(auto-fit, 60px)" gap="4">
+					<Grid
+						as={motion.div}
+						initial={{
+							opacity: 0,
+							y: 30,
+						}}
+						whileInView={{
+							opacity: 1,
+							y: 0,
+							transition: {
+								delay: 0.2,
+							},
+						}}
+						once="true"
+						viewport={{ amount: 0.9, once: true }}
+						gridTemplateColumns="repeat(auto-fit, 60px)"
+						gap="4"
+					>
 						{techStacks.map(({ name, JSXImage }) => {
 							return (
 								<Box key={name}>
@@ -798,7 +825,20 @@ const CareerInANutShell1 = () => {
 						backgroundColor={"blackAlpha.800"}
 						color="whitesmoke"
 					>
-						<Box w="120px" h="120px">
+						<Box
+							as={motion.div}
+							initial={{
+								opacity: 0,
+								y: 30,
+							}}
+							whileInView={{
+								opacity: 1,
+								y: 0,
+							}}
+							viewport={{ amount: 0.9, once: true }}
+							w="120px"
+							h="120px"
+						>
 							<svg className="h-[120px] w-[120px]" viewBox="0 0 208 91">
 								<g clip-path="url(#a)" fill="currentColor">
 									<path d="M57.53 8.15H40.95v74.52h16.58V8.15ZM79.64 8.15H63.06v74.52h16.58V8.15ZM28.218 85.981c6.455-6.455 6.455-16.922 0-23.377-6.456-6.455-16.922-6.455-23.377 0-6.456 6.455-6.456 16.922 0 23.377 6.455 6.455 16.921 6.455 23.377 0ZM104.89 33.06c9.129 0 16.53-7.4 16.53-16.53S114.019 0 104.89 0c-9.13 0-16.53 7.4-16.53 16.53s7.4 16.53 16.53 16.53ZM207.34 88.55l-42.23-42.23-11.35.09V8.14h-16.57v74.53h16.57V58.41l30.39 30.4 23.19-.26ZM181.96 33.06c9.129 0 16.53-7.4 16.53-16.53S191.089 0 181.96 0c-9.13 0-16.53 7.4-16.53 16.53s7.4 16.53 16.53 16.53Z"></path>
