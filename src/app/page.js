@@ -783,7 +783,7 @@ const CareerInANutShell1 = () => {
 			</Heading>
 			{/*  */}
 			<Box my="12">
-				<Flex gap="4">
+				<Flex flexDirection={{ base: "column", md: "row" }} gap="4">
 					<Box
 						flexShrink={"0"}
 						position="relative"
@@ -885,92 +885,6 @@ const CareerInANutShell1 = () => {
 				</Box>
 			</Box>
 		</Box>
-	);
-};
-
-const CareerInANutShell = () => {
-	return (
-		<section className="relative z-[4] mt-24 pt-16 border-t-4 border-black">
-			<div class="mb-12 grid grid-cols-5 gap-6">
-				<div class="col-span-2 col-start-1">
-					<img class="aspect-square bg-black" src="" alt="" />
-				</div>
-				<div class="col-span-3">
-					<h1 class="text-5xl font-black leading-none">
-						MD. MASHRUKUL HUQUE
-					</h1>
-					<p class="mt-2 text-lg font-medium uppercase">
-						Frontend Engineer/Design System/UI-UX
-					</p>
-					<p class="mt-5 max-w-[70ch] text-xl">
-						Delivering delightful web experiences over 3+ years with keen
-						focus towards frontend technologies that includes React.js,
-						Next.js and general Javascript stack.
-					</p>
-					<p class="mt-5 max-w-[70ch] text-xl">
-						Motivated to build the next big web, with the in-depth
-						knowledge I bring to the table in years of experience gathered
-						throughout my journey.
-					</p>
-				</div>
-			</div>
-			<h1 class="text-5xl font-black leading-none">
-				Career <br />
-				<span class="ml-10 inline-block font-light">in</span> a Nutshell
-			</h1>
-
-			<div class="my-12">
-				<div class="flex gap-4">
-					<div class="h-24 w-24 rounded-full bg-black"></div>
-					<div>
-						<h2 class="text-xl font-bold">UpB8</h2>
-						<p>Software Engineer</p>
-						<div class="mt-4 max-w-[50ch] text-xl">
-							<p>
-								Upb8 is a collective of carefully picked engineers and
-								creatives working together to produce high quality web
-								and mobile applications.
-							</p>
-							<p>
-								Worked primarily with design system implementation,
-								custom pages and API integration to enable feature with
-								stacks involving React.js, Next.js and Apollo GraphQL. s
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="mt-16">
-				<div>
-					<div class="mx-auto max-w-[70ch]">
-						<div class="flex aspect-video items-center justify-center border-4 border-black bg-black text-white">
-							<h1 class="text-6xl font-bold italic tracking-tighter">
-								drilk
-							</h1>
-						</div>
-
-						<div class="mt-9">
-							<h1 class="text-4xl font-bold leading-none tracking-[-0.025em]">
-								A CBD Brand featured on NHS, Global Health & Pharma
-							</h1>
-
-							{points.map(({ point }, index) => {
-								return (
-									<div
-										key="{index}"
-										class="mt-6 flex items-baseline gap-x-3 text-xl"
-									>
-										<div class="h-2 w-2 shrink-0 bg-black"></div>
-										<span>{point}</span>
-									</div>
-								);
-							})}
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 	);
 };
 
